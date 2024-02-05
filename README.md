@@ -1,6 +1,7 @@
 # Task Management App
 This Spring Boot application provides a REST API for task management.
 
+
 ## Prerequisites
 - Java 8 or higher
 - MySQL
@@ -25,4 +26,7 @@ The application will be accessible at http://localhost:8080.
 - POST http://localhost:8080/api/v1/task/saveTask: Save a new task.
 - DELETE http://localhost:8080/api/v1/task/{taskId}: Delete a task with the specified ID.
 - PUT http://localhost:8080/api/v1/task/{taskId}: Update a task with the specified ID.
+
+  ## Authentication with Spring Security
+  The application utilizes Spring Security to manage authentication. Login and signup functionalities are available.
  
