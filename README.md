@@ -1,5 +1,5 @@
 # Task Management App
-This Spring Boot application provides a REST API for task management. It also includes a simple user interface built with React.
+This Spring Boot application provides a REST API for task management.
 
 ## Prerequisites
 - Java 8 or higher
