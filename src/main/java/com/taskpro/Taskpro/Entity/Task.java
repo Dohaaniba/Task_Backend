@@ -3,7 +3,7 @@ package com.taskpro.Taskpro.Entity;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.taskpro.Taskpro.Entity.Status;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,10 +24,10 @@ public class Task {
 	private String description;
 	private Status status;
 	
-	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX", shape = JsonFormat.Shape.STRING)
+	//@JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
 	private LocalDate createdAt;
 
-	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX", shape = JsonFormat.Shape.STRING)
+	//@JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
 	private LocalDate dueDate; // la date ou la tache doit etre terminé 
 	
 	
@@ -74,19 +74,16 @@ public class Task {
 		this.createdAt = createdAt;
 	}
 	
-	public String ToString() {
-		return "User { "
-				+ "id" +id +
-				" , title" + title +
-				" ,description" + description +
-				" ,status " + status +
-				" createdAt " + createdAt +
-				" dueDate " + dueDate +
-				"}"
-				
-				
-				;
-		
-	}
+	@Override
+    public String toString() {
+        return "Task { "
+                + "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                ", createdAt=" + createdAt +
+                ", dueDate=" + dueDate +
+                "}";
+    }
 
 }
