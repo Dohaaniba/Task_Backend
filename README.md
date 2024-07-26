@@ -3,7 +3,7 @@ This Spring Boot application provides a REST API for task management.
 
 
 ## Prerequisites
-- Java 8 or higher
+- Java
 - MySQL
 
 
